@@ -1,0 +1,74 @@
+{
+  "tests": [
+    {
+      "name": "Insert 1 (1 Punkt)",
+      "setup": "make exercise6",
+      "run": "./exercise6 Test1",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Insert 2 (1 Punkt)",
+      "setup": "make exercise6",
+      "run": "./exercise6 Test2",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Insert 3 (1 Punkt)",
+      "setup": "make exercise6",
+      "run": "./exercise6 Test3",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Insert 4 (2 Punkte)",
+      "setup": "make exercise6",
+      "run": "./exercise6 Test4",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    },
+    {
+      "name": "evaluateExpression (1 Punkt)",
+      "setup": "make exercise6",
+      "run": "./exercise6 Test5",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "evaluateExpression2 (2 Punkte)",
+      "setup": "make exercise6",
+      "run": "./exercise6 Test6",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    },
+    {
+      "name": "evaluateExpression3 (2 Punkte)",
+      "setup": "make exercise6",
+      "run": "./exercise6 Test7",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    }
+  ]
+}

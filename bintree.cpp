@@ -77,9 +77,6 @@ int evaluateExpression(node *start){
             if (start->left == NULL){
                 return evaluateExpression(start->right);
             }
-            else if(start->left < start->right){
-                return evaluateExpression(start->right) - evaluateExpression(start->left);
-            }
             else return evaluateExpression(start->left) - evaluateExpression(start->right);
 
         default:return atoi(start->data);

@@ -55,6 +55,12 @@ node *insert(binTree *t, int key, const char *data){
 
     return newNode;
 }
+/**
+ * BEGIN REFERENCE AUTHOR: Clarissa Treml
+ * CO-AUTHORS: Jasmine Yilmaz, Christina Muckenhumer
+ */
+// Traversierungsstrategie => Post-Order: Zuerst nach links, dann nach rechts, dann zum Wurzelknoten.
+// evaluateExpression pointer char zu int verwandeln mit atoi methode.
 
 int evaluateExpression(node *start){
 
@@ -72,9 +78,6 @@ int evaluateExpression(node *start){
             if (start->left == NULL){
                 return -(evaluateExpression(start->right));
             }
-            /*else if(start->left < start->right){
-                return evaluateExpression(start->right) - evaluateExpression(start->left);
-            }*/
             else return evaluateExpression(start->left) - evaluateExpression(start->right);
 
         case '/':
@@ -86,3 +89,6 @@ int evaluateExpression(node *start){
         default:return atoi(start->data);
     }
 }
+/**
+ * END
+ */

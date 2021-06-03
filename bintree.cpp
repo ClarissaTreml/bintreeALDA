@@ -59,30 +59,37 @@ node *insert(binTree *t, int key, const char *data){
 int evaluateExpression(node *start){
 
 
+
     switch (start->data[0]) {
-
-        case '*':
-            return evaluateExpression(start->left) * evaluateExpression(start->right);
-
-        case '/':
-            return evaluateExpression(start->left) / evaluateExpression(start->right);
 
         case '+':
             if (start->left == NULL){
                 return evaluateExpression(start->right);
             }
-            else return evaluateExpression(start->left) + evaluateExpression(start->right);
+            else return (evaluateExpression(start->left)) + (evaluateExpression(start->right));
 
         case '-':
             if (start->left == NULL){
                 return evaluateExpression(start->right);
             }
-            else return evaluateExpression(start->left) - evaluateExpression(start->right);
+            /*else if(start->left < start->right){
+                return evaluateExpression(start->right) - evaluateExpression(start->left);
+            }*/
+            else return (evaluateExpression(start->left)) - (evaluateExpression(start->right));
 
-        default:return atoi(start->data);
+        case '/':
+            if (start->left == NULL){
+                return evaluateExpression(start->right);
+            }
+            else return evaluateExpression(start->left) / evaluateExpression(start->right);
+
+        case '*':
+            if (start->left == NULL){
+                return evaluateExpression(start->right);
+            }
+            else return evaluateExpression(start->left) * evaluateExpression(start->right);
+
+        default:
+            return atoi(start->data);
     }
-
-
-
-    return 0;
 }
